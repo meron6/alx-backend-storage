@@ -1,3 +1,16 @@
--- Task 9: Optimize search and score - creates an index idx_name_first_score on the table names
--- and the first letter of name and the score
-CREATE INDEX idx_name_first_score ON names ( name(1), score );
+-- Task 10: Safe divide - creates a function SafeDiv that divides
+-- (and returns) the first by the second number
+-- or returns 0 if the second number is equal to 0
+DELIMITER |
+DROP FUNCTION IF EXISTS SafeDiv;
+CREATE FUNCTION SafeDiv (a INT, b INT)
+RETURNS FLOAT
+BEGIN
+    DECLARE result FLOAT;
+    IF b = 0 THEN
+        SET result = 0;
+    ELSE
+        SET result = a / b;
+    END IF;
+    RETURN result;
+END;
