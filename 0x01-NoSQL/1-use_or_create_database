@@ -1,2 +1,2 @@
-// Task 1: Create a database
-CREATE DATABASE my_db;
+// Task 1. Create a database
+use my_db;

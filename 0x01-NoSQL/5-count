@@ -1,0 +1,2 @@
+// Task 5. Number of documents in collection
+db.school.count();
