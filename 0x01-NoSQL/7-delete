@@ -1,0 +1,2 @@
+// Task 7: Delete entries
+db.school.deleteMany({ name: "Holberton School" });
